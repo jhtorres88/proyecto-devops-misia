@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_USER = 'jhontorres88'
+        DOCKER_USER = 'jhonfredytorres88'
         IMAGE_NAME = 'proyecto-devops-misia'
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-auth')
         SONAR_TOKEN = credentials('sonar-token')
