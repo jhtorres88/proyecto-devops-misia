@@ -1,0 +1,19 @@
+# Ignorar dependencias locales (muy importante)
+node_modules
+
+# Ignorar control de versiones
+.git
+.gitignore
+
+# Ignorar archivos del IDE
+.idea
+.vscode
+
+# Ignorar archivos de Jenkins y Docker
+Jenkinsfile
+Dockerfile
+.dockerignore
+
+# Ignorar logs y documentación
+README.md
+*.log
