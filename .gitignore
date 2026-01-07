@@ -1,0 +1,20 @@
+# IDEs y Editores
+.idea/
+.vscode/
+*.swp
+*.iml
+
+# Dependencias (Se instalan en el pipeline, no se suben)
+node_modules/
+npm-debug.log*
+
+# Logs y temporales
+logs
+*.log
+.DS_Store
+
+# Cobertura de tests
+coverage/
+
+# Configuración de SonarQube local
+.scannerwork/
