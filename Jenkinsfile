@@ -49,7 +49,7 @@ pipeline {
         stage('6. Publicación en DockerHub') {
             steps {
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
-                sh 'docker push jhontorres88/proyecto-devops-misia:latest'
+                sh 'docker push ${DOCKER_USER}/proyecto-devops-misia:latest'
             }
         }
     }
