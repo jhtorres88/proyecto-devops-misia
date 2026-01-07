@@ -18,7 +18,7 @@ pipeline {
 
         stage('2. Tests Automatizados') {
             steps {
-                sh 'npm install'
+                sh 'npm ci || npm install'
                 sh 'npm test'
             }
         }
