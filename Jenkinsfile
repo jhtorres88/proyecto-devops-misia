@@ -41,7 +41,6 @@ pipeline {
 
         stage('5. Análisis de Seguridad (Trivy)') {
             steps {
-                // Escaneo de vulnerabilidades en la imagen Docker recién creada
                 echo "Analizando seguridad de la imagen con Trivy..."
                 sh "trivy image --severity HIGH,CRITICAL ${DOCKER_USER}/${IMAGE_NAME}:latest"
             }
@@ -49,10 +48,8 @@ pipeline {
 
         stage('6. Publicación en DockerHub') {
             steps {
-                // Acceso seguro y subida de la imagen al registro público
-                sh "echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin"
-                sh "docker push ${DOCKER_USER}/${IMAGE_NAME}:${BUILD_NUMBER}"
-                sh "docker push ${DOCKER_USER}/${IMAGE_NAME}:latest"
+                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+                sh 'docker push jhontorres88/proyecto-devops-misia:latest'
             }
         }
     }
