@@ -1,17 +1,17 @@
 {
   "name": "proyecto-devops-misia",
   "version": "1.0.0",
-  "description": "Proyecto para evaluacion de Agile y DevOps",
-  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "jest",
-    "start": "node app.js"
+    "sonar": "sonar-scanner -Dsonar.projectKey=proyecto-devops-misia -Dsonar.sources=. -Dsonar.host.url=http://localhost:9000"
   },
   "dependencies": {
     "express": "^4.18.2"
   },
   "devDependencies": {
     "jest": "^29.5.0",
-    "supertest": "^6.3.3"
+    "supertest": "^6.3.3",
+    "sonarqube-scanner": "^3.0.1"
   }
 }
